@@ -21,9 +21,10 @@ Steps :
 When making a package : 
 1. load `devtools` and `roxygen2`
 2. `create("debug.Compiled.R.Packages")`    # Create director
-3. `A=66; B=42; document()`                 # First two args are so main can complete w/o error
+3. `document()`                             # Generates man and NAMESPACE
 4. `setwd("..")`; `install("debug.Compiled.R.Packages")`
     a) Evidently, MUST have all code wrapped within functions. The files get sourced.
+
 ## References :
 1. [Not So Standard Deviations by Hillary Parker](https://hilaryparker.com/about-hilary-parker/)
 2. [Fong Chun Chan's Blog](https://tinyheero.github.io/jekyll/update/2015/07/26/making-your-first-R-package.html)
