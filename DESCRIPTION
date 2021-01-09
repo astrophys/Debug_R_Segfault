@@ -1,0 +1,15 @@
+Package: debug.Compiled.R.Packages
+Title: Debugging an R package with Compiled Code
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Ali",
+           family = "Snedden",
+           role = c("aut", "cre"),
+           email = "first.last@example.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: This package is my attempt to understand debugging compiled code. I'm having difficulty debugging segmentation faults in R-TDA.
+License: `use_mit_license()`
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1.9000
