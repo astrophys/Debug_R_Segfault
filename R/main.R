@@ -35,22 +35,22 @@ main<-function(A=0, B=0)
     return(result)
 }
 ### Called via RScript ###
-if(sys.nframe() == 0L){
-    args = commandArgs(trailingOnly=TRUE)
-    ### Catch incorrect program usage ###
-    print(args)
-    A = args[1]
-    B = args[2]
-    result = main(A,B)
-
-
-### Interactive ###
-}else{
-    if(!exists("A")){
-        exit_with_error("ERROR!!! A DNE\n")
-    }
-    if(!exists("B")){
-        exit_with_error("ERROR!!! B DNE\n")
-    }
-    result = main(A,B)
-}
+#if(sys.nframe() == 0L){
+#    args = commandArgs(trailingOnly=TRUE)
+#    ### Catch incorrect program usage ###
+#    print(args)
+#    A = args[1]
+#    B = args[2]
+#    result = main(A,B)
+#
+#
+#### Interactive ###
+#}else{
+#    if(!exists("A")){
+#        exit_with_error("ERROR!!! A DNE\n")
+#    }
+#    if(!exists("B")){
+#        exit_with_error("ERROR!!! B DNE\n")
+#    }
+#    result = main(A,B)
+#}
