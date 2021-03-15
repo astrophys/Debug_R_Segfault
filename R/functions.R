@@ -58,5 +58,6 @@ exit_with_error <- function(Str){
 #' add()
 ###############################################################################
 add <- function(A, B){
-    return(A + B)
+    my_cpp_add(A, B)
+    # return(A + B)
 }

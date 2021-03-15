@@ -1,1 +1,3 @@
 .*.swp
+src/RcppExports.cpp
+R/RcppExports.R

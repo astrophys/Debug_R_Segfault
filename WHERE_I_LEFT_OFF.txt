@@ -1,0 +1,21 @@
+Done:
+To Do:
+Questions:
+1. When invoking 
+    `setwd("/gpfs0/home1/gdhpcgroup/aps003/Code/R/debug.Compiled.R.Packages");
+     library(devtools);
+     library(roxygen2);
+     document();
+     setwd("..");
+     install("debug.Compiled.R.Packages");`
+   Why does it link to libraries like 
+     -L/gapps/easybuild/software/LibTIFF/4.1.0-GCCcore-9.3.0/lib64?
+
+2. I can't figure out why my code fails.
+    --> let's follow https://cran.r-project.org/web/packages/Rcpp/vignettes/Rcpp-package.pdf and use Rcpp.pakcage.skeleton
+    --> Ran :
+       > setwd("/gpfs0/home1/gdhpcgroup/aps003/Code/R/mypackage"); library(devtools); library(roxygen2); document(); setwd(".."); install("mypackage");
+       > library(mypackage)
+       > rcpp_hello_world() # This works. I wonder if I can't use C/C++ types.
+3. Reading : https://cran.r-project.org/doc/manuals/R-exts.html#Creating-R-packages
+    a) 
