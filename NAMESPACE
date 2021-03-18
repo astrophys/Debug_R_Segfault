@@ -3,3 +3,4 @@
 export(add)
 export(exit_with_error)
 export(main)
+export(my_cpp_add)

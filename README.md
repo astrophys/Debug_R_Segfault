@@ -18,7 +18,12 @@ Steps :
 ## Running :
 
 ## Notes :
-When making a package : 
+If you've cloned this repo:
+1. `library(devtools); library(roxygen2)`
+2. `document()`
+
+
+To create a raw package (NOT what you'll do if you've cloned this repo): 
 1. load `devtools` and `roxygen2`
 2. `create("debug.Compiled.R.Packages")`    # Create director
 3. `document()`                             # Generates man and NAMESPACE
@@ -37,8 +42,15 @@ On Compiling :
 2. R magically compiles code into shared library
 
 
+On Namespace :
+1. Can selectively export functions to users, hold back other functions for
+   internal use.
+2. `search()` provides a list of search paths.
+3. `library()` loads the package into memory and then adds it to search path.
+
+
 ## References :
-1. [Not So Standard Deviations by Hillary Parker](https://hilaryparker.com/about-hilary-parker/)
+1. [Not So Standard Deviations by Hillary Parker](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/)
 2. [Fong Chun Chan's Blog](https://tinyheero.github.io/jekyll/update/2015/07/26/making-your-first-R-package.html)
 3. [Compiled Code - R-pkgs.org](https://r-pkgs.org/src.html)
 4. [Understanding Makevars - Stackoverflow](https://stackoverflow.com/a/43599233/4021436)

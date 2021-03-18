@@ -17,5 +17,15 @@ Questions:
        > setwd("/gpfs0/home1/gdhpcgroup/aps003/Code/R/mypackage"); library(devtools); library(roxygen2); document(); setwd(".."); install("mypackage");
        > library(mypackage)
        > rcpp_hello_world() # This works. I wonder if I can't use C/C++ types.
+
 3. Reading : https://cran.r-project.org/doc/manuals/R-exts.html#Creating-R-packages
     a) 
+
+4. add() works with 'return(A+B)', but not
+
+
+How to debug:
+1. library("roxygen2"); library("devtools"); document(); setwd(".."); install("debug.Compiled.R.Packages")
+2. library("debug.Compiled.R.Packages")
+
+

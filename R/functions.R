@@ -58,6 +58,7 @@ exit_with_error <- function(Str){
 #' add()
 ###############################################################################
 add <- function(A, B){
-    my_cpp_add(A, B)
-    # return(A + B)
+    #intSum = .Call('my_cpp_add', (A, B))        # Does NOT work - Why?
+    #return(my_cpp_add(A, B))        # Does NOT work - Why?
+    return(A + B)                 # Works!
 }
