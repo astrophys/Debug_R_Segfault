@@ -27,5 +27,7 @@ Questions:
 How to debug:
 1. library("roxygen2"); library("devtools"); document(); setwd(".."); install("debug.Compiled.R.Packages")
 2. library("debug.Compiled.R.Packages")
+3. If I call dyn.load("~/.R/3.6.3-lib/debug.Compiled.R.Packages/libs/debug.Compiled.R.Packages.so"), my_cpp_add works. See : http://users.stat.umn.edu/~geyer/rc/
 
-
+Stack Overflow question
+1. Need to get the Rproj file working in my question.
