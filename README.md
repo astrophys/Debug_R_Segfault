@@ -82,14 +82,24 @@ Beginning new project :
     a) `Rcpp::compileAttributes()`
     #) `R CMD INSTALL --no-multiarch --with-keep.source new.package`
 8. Running `timesTwo()` fails here (step 4). Why?
+9. I closed the project here. The `cmd/ctl` functions don't work when I reopen RStudio (even
+   in the working directory)
+    a) Evidently, I need to reopen the *.Rproj file to get it to work
 9. To src/code.cpp, added 
     //' Multiply a number by two
     //' 
     //' @param x A single integer.
     //' @export 
-10. `cmd/ctl shift D` effectively runs :
-11. `cmd/ctl shift B` effectively runs :
-12. Ran 
+10. Rerunning `cmd/ctl shift D` and `cmd/ctl shift B` still doesn't work in getting
+    timesTwo() to work
+11. This ends my attempt at using stupid RStudio.
+
+Beginning new project (using [Rcpp Vignette] : 
+0. library("Rcpp")
+1. Rcpp.package.skeleton("test.rcpp.package")
+2. Editting src/rcpp_hello_world.cpp with an add() function
+3. library("roxygen2"); library("devtools"); install("test.rcpp.package")
+
 
 
 ## References :
