@@ -8,11 +8,13 @@ Refs   :
 
 ****************************************************/
 #include <Rcpp.h>
+#include <stdio.h>
 using namespace Rcpp;
 
 // [[Rcpp::export]]
 int my_cpp_add(int A, int B)
 {
+	printf("Adding %i + %i...\n", A, B);
     return(A+B);
 }
 
@@ -20,5 +22,6 @@ int my_cpp_add(int A, int B)
 // [[Rcpp::export]]
 int my_cpp_multiply(int A, int B)
 {
+	printf("Multiplying %i x %i...\n", A, B);
     return(A*B);
 }

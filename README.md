@@ -108,6 +108,15 @@ To edit existing project :
 4. It is open question on how I should regenerate the documentation (e.g. using ?somefunc)
 
 
+To debug code : 
+1. If on Mac, follow https://sourceware.org/gdb/wiki/PermissionsDarwin to get gdb to work if 
+   you get "please check gdb is codesigned - see taskgated(8)" error
+2. R -d gdb
+3. run      ## This should start the R console. Deviates here from https://blog.davisvaughan.com/2019/04/05/debug-r-package-with-cpp/
+4. Ctl - C  ## In R-console, breaks you back into gdb context
+5. continue ## Press enter twice and drops you back into the R console
+
+
 ## References :
 1. [Not So Standard Deviations by Hillary Parker](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/)
 2. [Fong Chun Chan's Blog](https://tinyheero.github.io/jekyll/update/2015/07/26/making-your-first-R-package.html)
