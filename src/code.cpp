@@ -15,3 +15,10 @@ int my_cpp_add(int A, int B)
 {
     return(A+B);
 }
+
+
+// [[Rcpp::export]]
+int my_cpp_multiply(int A, int B)
+{
+    return(A*B);
+}

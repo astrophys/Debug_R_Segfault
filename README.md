@@ -101,6 +101,12 @@ Beginning new project (using [Rcpp Vignette] :
 3. library("roxygen2"); library("devtools"); install("test.rcpp.package")
 
 
+To edit existing project : 
+1. Change code.cpp
+2. Run Rcpp::compileAttributes("debug.Compiled.R.Packages") to regenerate RcppExports.cpp
+3. Run devtools::install("debug.Compiled.R.Packages")
+4. It is open question on how I should regenerate the documentation (e.g. using ?somefunc)
+
 
 ## References :
 1. [Not So Standard Deviations by Hillary Parker](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/)
