@@ -31,3 +31,7 @@ How to debug:
 
 Stack Overflow question
 1. Need to get the Rproj file working in my question.
+2. Ask question regarding how to specify the compiler to use in src/Makevars
+    a) about makefiles : https://stackoverflow.com/a/58419017/4021436
+    #) See : https://stackoverflow.com/q/66859995/4021436
+
