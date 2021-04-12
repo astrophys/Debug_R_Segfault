@@ -47,74 +47,7 @@ On Namespace :
    internal use.
 2. `search()` provides a list of search paths.
 3. `library()` loads the package into memory and then adds it to search path.
-
-
-Beginning new project : 
-### from Hilary Parker
-1. `library("devtools"); library("roxygen2")`
-2. `create("new.package")`    # from Rstudio, it creates new.package and new.package/R,
-    DESCRIPTION, creates new.package.Rproj (necessary for hot-keys to work,
-    e.g. cmd/ctl shift B)
-3. Add .R file to new.package/R/
-4. `document()`
-5. `setwd("..")`
-6. `install("new.package")`
-### from https://r-pkgs.org/src.html
-5. `usethis::use_rcpp()`
-    a) Create a src/ directory to hold your .cpp files. 
-        #. Created code.cpp
-    b) Add Rcpp to the LinkingTo and Imports fields in the DESCRIPTION.
-    c) Set up a .gitignore file 
-    d) Tell you the two roxygen tags you need to add to your package:
-        #. To R/new.package-package.R added 
-            ## usethis namespace: start
-            #' @importFrom Rcpp sourceCpp
-            ## usethis namespace: end
-            NULL
-6. `cmd/ctl shift D` effectively runs :
-    a) Rcpp::compileAttributes() 
-        #. Updates RcppExports.cpp and RcppExports.R
-    b) devtools::document(roclets = c('rd', 'collate', 'namespace'))
-    c) These actions 
-        #. Compiled the object files and shared lib.
-        #. Added `importFrom(Rcpp,sourceCpp)`
-7. `cmd/ctl shift B` effectively runs :
-    a) `Rcpp::compileAttributes()`
-    #) `R CMD INSTALL --no-multiarch --with-keep.source new.package`
-8. Running `timesTwo()` fails here (step 4). Why?
-9. I closed the project here. The `cmd/ctl` functions don't work when I reopen RStudio (even
-   in the working directory)
-    a) Evidently, I need to reopen the *.Rproj file to get it to work
-9. To src/code.cpp, added 
-    //' Multiply a number by two
-    //' 
-    //' @param x A single integer.
-    //' @export 
-10. Rerunning `cmd/ctl shift D` and `cmd/ctl shift B` still doesn't work in getting
-    timesTwo() to work
-11. This ends my attempt at using stupid RStudio.
-
-Beginning new project (using [Rcpp Vignette] : 
-0. library("Rcpp")
-1. Rcpp.package.skeleton("test.rcpp.package")
-2. Editting src/rcpp_hello_world.cpp with an add() function
-3. library("roxygen2"); library("devtools"); install("test.rcpp.package")
-
-
-To edit existing project : 
-1. Change code.cpp
-2. Run Rcpp::compileAttributes("debug.Compiled.R.Packages") to regenerate RcppExports.cpp
-3. Run devtools::install("debug.Compiled.R.Packages")
-4. It is open question on how I should regenerate the documentation (e.g. using ?somefunc)
-
-
-To debug code : 
-1. If on Mac, follow https://sourceware.org/gdb/wiki/PermissionsDarwin to get gdb to work if 
-   you get "please check gdb is codesigned - see taskgated(8)" error
-2. R -d gdb
-3. run      ## This should start the R console. Deviates here from https://blog.davisvaughan.com/2019/04/05/debug-r-package-with-cpp/
-4. Ctl - C  ## In R-console, breaks you back into gdb context
-5. continue ## Press enter twice and drops you back into the R console
+    a) Never use in a package, only in external scripts calling the package
 
 
 ## References :
@@ -124,4 +57,3 @@ To debug code :
 4. [Understanding Makevars - Stackoverflow](https://stackoverflow.com/a/43599233/4021436)
 5. [Rcpp Vignettes](https://cran.r-project.org/web/packages/Rcpp/vignettes/Rcpp-package.pdf)
 6. [Writing R Extensions](https://cran.r-project.org/doc/manuals/R-exts.html)
-
